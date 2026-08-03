@@ -7,19 +7,44 @@
         @page {
             size: A4;
             margin: 15mm 15mm;
-            background-color: #ffffff;
         }
         *, *::before, *::after {
             box-sizing: border-box;
         }
+        
+        /* Đổi màu nền ngoài web thành xám nhạt để làm nổi bật tờ CV */
+        html {
+            background-color: #f0f2f5; 
+        }
+
+        /* Định dạng khung giấy A4 */
         body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             color: #333333;
-            margin: 0;
-            padding: 0;
+            margin: 40px auto; /* Căn giữa trang web, cách trên dưới 40px */
+            padding: 15mm 15mm;
             line-height: 1.5;
             font-size: 10.5pt;
+            max-width: 210mm; /* Giới hạn chiều rộng đúng chuẩn A4 */
+            background-color: #ffffff; /* Màu nền trắng của giấy */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Tạo bóng đổ viền 3D */
+            border-radius: 4px; /* Bo góc cực nhẹ cho đẹp mắt */
         }
+
+        /* Tắt bóng đổ và căn giữa khi người dùng bấm In (Ctrl+P) hoặc Save PDF */
+        @media print {
+            html {
+                background-color: #ffffff;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+                box-shadow: none;
+                max-width: none;
+                border-radius: 0;
+            }
+        }
+
         header {
             text-align: center;
             border-bottom: 2px solid #2B547E;
