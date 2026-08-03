@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nguyen Phuoc Dai Toan - Resume</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 15mm 15mm;
+            background-color: #ffffff;
+        }
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+            font-size: 10.5pt;
+        }
+        header {
+            text-align: center;
+            border-bottom: 2px solid #2B547E;
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        h1 {
+            margin: 0 0 5px 0;
+            font-size: 24pt;
+            color: #2B547E;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .subtitle {
+            font-size: 13pt;
+            font-weight: bold;
+            color: #555555;
+            margin-bottom: 8px;
+        }
+        .contact-info {
+            font-size: 10pt;
+            color: #666666;
+        }
+        .contact-info span {
+            margin: 0 8px;
+        }
+        h2 {
+            font-size: 13pt;
+            color: #2B547E;
+            border-bottom: 1px solid #dddddd;
+            padding-bottom: 4px;
+            margin-top: 12px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+        .section-content {
+            margin-bottom: 8px;
+        }
+        .job {
+            margin-bottom: 10px;
+        }
+        .job-header {
+            display: table;
+            width: 100%;
+            margin-bottom: 4px;
+        }
+        .job-title-company {
+            display: table-cell;
+            text-align: left;
+            font-weight: bold;
+            font-size: 11pt;
+        }
+        .job-date {
+            display: table-cell;
+            text-align: right;
+            font-size: 10pt;
+            color: #666666;
+            font-style: italic;
+        }
+        ul {
+            margin: 0 0 0 18px;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 4px;
+            text-align: justify;
+        }
+        .skills-table {
+            display: table;
+            width: 100%;
+        }
+        .skill-row {
+            display: table-row;
+        }
+        .skill-category {
+            display: table-cell;
+            font-weight: bold;
+            width: 120px;
+            padding-bottom: 4px;
+        }
+        .skill-list {
+            display: table-cell;
+            padding-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Nguyễn Phước Đại Toàn</h1>
+        <div class="subtitle">Fullstack Engineer | SaaS & CRM Platform</div>
+        <div class="contact-info">
+            <span>nguyentoan102002@gmail.com</span> | 
+            <span>+84388202534</span> | 
+            <span>Da Nang, Viet Nam</span><br/>
+            <span>GitHub: github.com/NguyenPhuocDaiToan</span> | 
+            <span>LinkedIn: linkedin.com/in/nguyentoan2002</span>
+        </div>
+    </header>
+
+    <div class="section-content">
+        <h2>Professional Summary</h2>
+        <p style="margin-top:0;">
+            Fullstack Engineer specializing in scalable SaaS CRM and Omnichannel platforms, with strong expertise in distributed systems, real-time messaging, and cloud-native architectures. Proven ability to lead development teams, handle heavy data loads, optimize message queues, and deploy robust clusters. Highly self-motivated and communicative, making me well-equipped for remote collaboration. Eager to apply my system design background to drive impactful healthcare technology solutions.
+        </p>
+    </div>
+
+    <div class="section-content">
+        <h2>Technical Skills</h2>
+        <div class="skills-table">
+            <div class="skill-row">
+                <div class="skill-category">Backend:</div>
+                <div class="skill-list">Node.js, ExpressJS, NestJS, Java, Spring Boot, Python (Django)</div>
+            </div>
+            <div class="skill-row">
+                <div class="skill-category">Frontend:</div>
+                <div class="skill-list">Angular, ReactJS, TypeScript, JavaScript, HTML/CSS, Tailwind</div>
+            </div>
+            <div class="skill-row">
+                <div class="skill-category">Databases:</div>
+                <div class="skill-list">MongoDB, MySQL, SQL Server, Redis, ClickHouse</div>
+            </div>
+            <div class="skill-row">
+                <div class="skill-category">DevOps & Cloud:</div>
+                <div class="skill-list">Kubernetes (K8s), AWS (EC2, S3, RDS), Docker, Kafka, CI/CD, RabbitMQ, BullMQ</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-content">
+        <h2>Work Experience</h2>
+        
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title-company">Fullstack Developer & Team Lead | AntBuddy</div>
+                <div class="job-date">06/2023 – Present</div>
+            </div>
+            <ul>
+                <li><strong>SaaS Architecture & Leadership:</strong> Designed and operated a highly scalable, multi-tenant SaaS CRM platform serving enterprise clients across Vietnam, Saudi Arabia, and Indonesia while leading a 5-member development team.</li>
+                <li><strong>Omnichannel System:</strong> Spearheaded a real-time Omnichannel support system (Livechat, WhatsApp, Zalo, Facebook, Email) capable of concurrently processing hundreds of thousands of marketing messages and customer conversations.</li>
+                <li><strong>Contact Import Engine:</strong> Designed a high-volume Contact Import Engine with streaming processing, deduplication strategies, batch writes and asynchronous reporting.</li>
+                <li><strong>Workflow Automation:</strong> Built workflow automation modules enabling event-driven business processes and customer engagement automation.</li>
+                <li><strong>System Optimization:</strong> Optimized Redis Queue architecture to prioritize real-time Agent/Customer interactions over batch Campaign messages (managing 500,000+ contacts), ensuring zero latency impact on live operations.</li>
+                <li><strong>High Availability & Infrastructure:</strong> Participated in the design and operation of HA infrastructures for MongoDB, Redis, Kafka, and ClickHouse to support heavy data loads and real-time services.</li>
+                <li><strong>Enterprise Integration:</strong> Integrated CRM and Omnichannel services with enterprise customer ecosystems and third-party platforms across multiple regions.</li>
+                <li><strong>BSS & CMS:</strong> Developed "Lotus", a Business Support System (BSS) for billing/subscriptions, and implemented a headless CMS architecture using Payload CMS.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title-company">Fullstack Developer | IZI SOFTWARE</div>
+                <div class="job-date">01/2023 – 04/2023</div>
+            </div>
+            <ul>
+                <li>Developed "TRAFFICLIGHT", a web application to manage traffic lights and monitor traffic on a map interface.</li>
+                <li>Designed the database architecture and implemented management functionalities for device types, configurations, and system settings.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section-content">
+        <h2>Education & Certifications</h2>
+        <div class="job-header" style="margin-bottom:0;">
+            <div class="job-title-company">Da Nang University of Science and Technology</div>
+            <div class="job-date">10/2020 – 09/2025</div>
+        </div>
+        <div style="font-size: 10.5pt; margin-bottom: 5px;">Major: Information Technology - Software Engineering | GPA: 3.83/4.0</div>
+        <ul>
+            <li><strong>Certifications:</strong> TOEIC 685</li>
+            <li><strong>Graduation Research Project:</strong> AI-assisted CRM System for Medical Diagnosis from X-ray Images.</li>
+            <li><strong>Honors:</strong> Achieved Excellent Student status and received multiple Encouraging Study & Company Scholarships (Paradox, KMS).</li>
+            <li><strong>Other AI/Tech Projects:</strong> Real-time fall detection using Jetson Nano, Handwritten Text Recognition.</li>
+        </ul>
+    </div>
+
+</body>
+</html>
