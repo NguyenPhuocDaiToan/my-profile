@@ -1,302 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nguyen Phuoc Dai Toan - Fullstack Engineer Resume</title>
-    <meta name="description" content="Fullstack Engineer & Team Lead specializing in scalable multi-tenant SaaS CRM, Omnichannel messaging, distributed systems and cloud-native infrastructure (Node.js, NestJS, Angular, React, Kafka, Redis, MongoDB, Kubernetes). Open to remote and freelance work.">
-    <meta property="og:type" content="profile">
-    <meta property="og:title" content="Nguyen Phuoc Dai Toan - Fullstack Engineer">
-    <meta property="og:description" content="Multi-tenant SaaS CRM, Omnichannel messaging, distributed systems, Kubernetes. Open to remote and freelance work.">
-    <meta property="og:url" content="https://nguyenphuocdaitoan.github.io/my-profile/">
-    <style>
-        @page {
-            size: A4;
-            margin: 15mm 15mm;
-        }
-        *, *::before, *::after {
-            box-sizing: border-box;
-        }
-
-        html {
-            background-color: #f0f2f5;
-        }
-
-        body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            color: #333333;
-            margin: 40px auto;
-            padding: 15mm 15mm;
-            line-height: 1.5;
-            font-size: 10.5pt;
-            max-width: 210mm;
-            background-color: #ffffff;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-            border-radius: 4px;
-        }
-
-        @media (max-width: 700px) {
-            body {
-                margin: 0;
-                padding: 16px;
-                border-radius: 0;
-            }
-            .job-header { display: block; }
-            .job-title-company, .job-date { display: block; text-align: left; }
-            .skill-row, .skills-table { display: block; }
-            .skill-category, .skill-list { display: block; width: auto; }
-        }
-
-        @media print {
-            html { background-color: #ffffff; }
-            body {
-                margin: 0;
-                padding: 0;
-                box-shadow: none;
-                max-width: none;
-                border-radius: 0;
-            }
-            .no-print { display: none !important; }
-            a { color: inherit; text-decoration: none; }
-            .job { page-break-inside: avoid; }
-        }
-
-        a { color: #2B547E; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-
-        .download-btn {
-            position: fixed;
-            top: 16px;
-            right: 16px;
-            background: #2B547E;
-            color: #ffffff;
-            border: none;
-            padding: 10px 16px;
-            border-radius: 4px;
-            font-size: 10pt;
-            cursor: pointer;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-        }
-        .download-btn:hover { background: #1f3d5c; }
-
-        header {
-            text-align: center;
-            border-bottom: 2px solid #2B547E;
-            padding-bottom: 12px;
-            margin-bottom: 12px;
-        }
-        h1 {
-            margin: 0 0 5px 0;
-            font-size: 24pt;
-            color: #2B547E;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .subtitle {
-            font-size: 13pt;
-            font-weight: bold;
-            color: #555555;
-            margin-bottom: 4px;
-        }
-        .availability {
-            font-size: 10pt;
-            color: #2B547E;
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
-        .contact-info {
-            font-size: 10pt;
-            color: #666666;
-        }
-        .contact-info span {
-            margin: 0 8px;
-            white-space: nowrap;
-        }
-        h2 {
-            font-size: 13pt;
-            color: #2B547E;
-            border-bottom: 1px solid #dddddd;
-            padding-bottom: 4px;
-            margin-top: 12px;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-        }
-        .section-content {
-            margin-bottom: 8px;
-        }
-        .job {
-            margin-bottom: 10px;
-        }
-        .job-header {
-            display: table;
-            width: 100%;
-            margin-bottom: 4px;
-        }
-        .job-title-company {
-            display: table-cell;
-            text-align: left;
-            font-weight: bold;
-            font-size: 11pt;
-        }
-        .job-date {
-            display: table-cell;
-            text-align: right;
-            font-size: 10pt;
-            color: #666666;
-            font-style: italic;
-        }
-        .tech {
-            font-size: 9.5pt;
-            color: #555555;
-            margin: 2px 0 0 0;
-        }
-        ul {
-            margin: 0 0 0 18px;
-            padding: 0;
-        }
-        li {
-            margin-bottom: 4px;
-            text-align: justify;
-        }
-        .skills-table {
-            display: table;
-            width: 100%;
-        }
-        .skill-row {
-            display: table-row;
-        }
-        .skill-category {
-            display: table-cell;
-            font-weight: bold;
-            width: 150px;
-            padding-bottom: 4px;
-            padding-right: 8px;
-            vertical-align: top;
-        }
-        .skill-list {
-            display: table-cell;
-            padding-bottom: 4px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nguyễn Phước Đại Toàn | Fullstack Engineer & Team Lead</title>
+<meta name="description" content="Portfolio of Nguyễn Phước Đại Toàn, Fullstack Engineer and Team Lead. Multi-tenant SaaS CRM, Omnichannel messaging at 1.8M messages a day, payment platforms, and AI-agent-driven development.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nguyễn Phước Đại Toàn | Fullstack Engineer & Team Lead">
+<meta property="og:description" content="Nearly 200 tenants, 1.8M messages in one day, AI-agent-driven development. See projects, skills and CV.">
+<meta property="og:url" content="https://nguyenphuocdaitoan.github.io/my-profile/">
+<meta property="og:image" content="https://nguyenphuocdaitoan.github.io/my-profile/assets/omnichannel/00_cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b1020">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b1020;--bg2:#111833;--card:rgba(255,255,255,.05);--line:rgba(255,255,255,.1);
+  --ink:#eef1ff;--ink2:#aab3d4;--ink3:#7b86ad;
+  --indigo:#6366f1;--cyan:#22d3ee;--pink:#f472b6;--green:#34d399;--amber:#fbbf24;
+  --grad:linear-gradient(90deg,#818cf8,#22d3ee);
+  --radius:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.bg{position:fixed;inset:0;z-index:-1;overflow:hidden;background:radial-gradient(1000px 600px at 85% -10%,#1e2a6b55,transparent 60%),radial-gradient(800px 600px at -10% 40%,#0e4a5a44,transparent 60%),var(--bg)}
+.blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.35;animation:float 18s ease-in-out infinite}
+.b1{width:420px;height:420px;background:#6366f1;top:-80px;left:55%}
+.b2{width:360px;height:360px;background:#06b6d4;top:55%;left:-100px;animation-delay:-6s}
+.b3{width:300px;height:300px;background:#ec4899;top:75%;right:-80px;animation-delay:-11s;opacity:.22}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(40px,-50px) scale(1.12)}}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(11,16,32,.72);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-weight:800;font-size:18px;letter-spacing:-.3px}.logo span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.links{display:flex;gap:26px;align-items:center;font-size:15px;font-weight:600;color:var(--ink2)}
+.links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;font-weight:700;font-size:15px;border:1px solid var(--line);transition:transform .2s,box-shadow .2s,background .2s;cursor:pointer;font-family:inherit;color:var(--ink);background:transparent}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:linear-gradient(90deg,#6366f1,#06b6d4);border:none;box-shadow:0 10px 30px rgba(99,102,241,.4)}
+.btn.primary:hover{box-shadow:0 14px 38px rgba(34,211,238,.45)}
+.btn.ghost:hover{background:var(--card)}
+.btn.sm{padding:9px 16px;font-size:14px}
+section{padding:92px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:var(--cyan)}
+.eyebrow i{width:26px;height:2px;background:var(--cyan);display:block}
+h2{font-size:clamp(30px,4vw,44px);line-height:1.12;letter-spacing:-1px;margin-top:12px;font-weight:800}
+h2 em,h1 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--ink2);font-size:18px;max-width:720px;margin-top:14px}
+.hero{padding:96px 0 70px}
+.hero .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-size:14px;font-weight:600;color:var(--ink2)}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 rgba(52,211,153,.7);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(52,211,153,0)}100%{box-shadow:0 0 0 0 rgba(52,211,153,0)}}
+h1{font-size:clamp(40px,6vw,68px);line-height:1.04;letter-spacing:-2px;font-weight:800;margin-top:22px}
+.type{color:var(--ink);font-weight:700}
+.type::after{content:"";display:inline-block;width:3px;height:1em;background:var(--cyan);margin-left:4px;vertical-align:-.12em;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.lead{font-size:20px;color:var(--ink2);margin-top:20px;max-width:620px}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.socials{display:flex;gap:18px;margin-top:26px;font-size:14px;color:var(--ink3);font-weight:600;flex-wrap:wrap}
+.socials a:hover{color:var(--cyan)}
+.hero-card{position:relative;border-radius:26px;padding:26px;background:linear-gradient(160deg,rgba(255,255,255,.09),rgba(255,255,255,.03));border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.45);transform:perspective(1000px) rotateY(-6deg) rotateX(3deg);transition:transform .4s}
+.hero-card:hover{transform:perspective(1000px) rotateY(0) rotateX(0)}
+.term{font-family:"JetBrains Mono",monospace;font-size:14px;line-height:1.9;color:#cbd5ff}
+.term .d{display:flex;gap:7px;margin-bottom:14px}.term .d i{width:11px;height:11px;border-radius:50%;display:block}
+.term .k{color:#f472b6}.term .s{color:#34d399}.term .c{color:#7b86ad}.term .f{color:#fbbf24}
+.chipfloat{position:absolute;padding:9px 14px;border-radius:14px;background:rgba(17,24,51,.92);border:1px solid var(--line);font-size:13px;font-weight:700;box-shadow:0 12px 30px rgba(0,0,0,.4);animation:bob 5s ease-in-out infinite}
+.cf1{top:-18px;right:24px}.cf2{bottom:-18px;left:18px;animation-delay:-2s}.cf3{bottom:-18px;right:18px;animation-delay:-3.5s}
+.hero-card{margin-bottom:18px}
+@keyframes bob{50%{transform:translateY(-9px)}}
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:64px}
+.stat{padding:22px 20px;border-radius:var(--radius);background:var(--card);border:1px solid var(--line);text-align:left}
+.stat b{display:block;font-size:clamp(28px,3vw,38px);font-weight:800;letter-spacing:-1px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{font-size:14px;color:var(--ink2);line-height:1.4;display:block;margin-top:4px}
+.tabs{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.tab{padding:9px 18px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink2);font-weight:700;font-size:14px;cursor:pointer;font-family:inherit;transition:.2s}
+.tab:hover{color:var(--ink)}.tab.on{background:linear-gradient(90deg,#6366f1,#06b6d4);color:#fff;border-color:transparent}
+.legend{margin-top:18px;font-size:14px;color:var(--ink3);display:flex;align-items:center;gap:10px}
+.legend i{width:10px;height:10px;border-radius:50%;background:var(--amber);box-shadow:0 0 12px var(--amber)}
+.skills{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.sk{padding:10px 18px;border-radius:14px;background:var(--card);border:1px solid var(--line);font-weight:600;font-size:15px;color:var(--ink2);transition:transform .2s,border-color .2s,color .2s,opacity .3s;position:relative}
+.sk:hover{transform:translateY(-3px) scale(1.04);color:var(--ink);border-color:var(--cyan)}
+.sk.core{color:var(--ink);border-color:rgba(251,191,36,.55);background:linear-gradient(180deg,rgba(251,191,36,.12),rgba(251,191,36,.03))}
+.sk.hide{display:none}
+.grid{display:grid;gap:24px}
+.projects{grid-template-columns:repeat(2,1fr);margin-top:40px}
+.proj{border-radius:var(--radius);background:var(--card);border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,border-color .3s,box-shadow .3s}
+.proj:hover{transform:translateY(-6px);border-color:rgba(34,211,238,.5);box-shadow:0 24px 60px rgba(0,0,0,.45)}
+.proj .img{position:relative;aspect-ratio:4/3;overflow:hidden;background:#0d1330;cursor:pointer;border:0;padding:0;display:block;width:100%}
+.proj .img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.proj:hover .img img{transform:scale(1.05)}
+.proj .more{position:absolute;right:14px;bottom:14px;padding:8px 14px;border-radius:999px;background:rgba(11,16,32,.85);border:1px solid var(--line);font-size:13px;font-weight:700}
+.proj .body{padding:24px 26px 28px;display:flex;flex-direction:column;gap:12px;flex:1}
+.proj h3{font-size:22px;letter-spacing:-.4px;line-height:1.25}
+.proj p{color:var(--ink2);font-size:16px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:6px}
+.tag{padding:5px 12px;border-radius:999px;font-size:13px;font-weight:600;background:rgba(99,102,241,.16);color:#c7d0ff}
+.badge{display:inline-block;align-self:flex-start;padding:4px 12px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;background:rgba(52,211,153,.15);color:var(--green)}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:44px;position:relative}
+.step{padding:22px 18px;border-radius:var(--radius);background:var(--card);border:1px solid var(--line);position:relative}
+.step .n{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:14px;background:linear-gradient(135deg,#6366f1,#06b6d4);margin-bottom:12px}
+.step b{display:block;font-size:17px}.step span{font-size:14px;color:var(--ink2);display:block;margin-top:4px;line-height:1.45}
+.step:not(:last-child)::after{content:"→";position:absolute;right:-13px;top:50%;transform:translateY(-50%);color:var(--cyan);font-weight:800;z-index:2;font-size:18px}
+.ai-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:28px}
+.box{padding:26px;border-radius:var(--radius);background:var(--card);border:1px solid var(--line)}
+.box h3{font-size:19px;margin-bottom:12px}
+.box ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+.box li{color:var(--ink2);padding-left:22px;position:relative;font-size:16px}
+.box li::before{content:"";position:absolute;left:0;top:10px;width:8px;height:8px;border-radius:50%;background:var(--cyan)}
+.box li b{color:var(--ink)}
+.tools{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.tool{padding:12px 20px;border-radius:14px;font-weight:800;border:1px solid var(--line);background:linear-gradient(135deg,rgba(99,102,241,.2),rgba(6,182,212,.12))}
+.tl{margin-top:40px;position:relative;padding-left:28px;display:flex;flex-direction:column;gap:26px}
+.tl::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--indigo),var(--cyan))}
+.ti{position:relative;padding:22px 26px;border-radius:var(--radius);background:var(--card);border:1px solid var(--line)}
+.ti::before{content:"";position:absolute;left:-28px;top:30px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--cyan)}
+.ti .when{font-size:13px;font-weight:700;color:var(--cyan);letter-spacing:.5px}
+.ti h3{font-size:20px;margin-top:4px}.ti p{color:var(--ink2);margin-top:8px;font-size:16px}
+.clients{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.client{padding:8px 16px;border-radius:12px;border:1px solid var(--line);background:var(--card);font-weight:700;font-size:14px;color:var(--ink2)}
+.contact{text-align:center;padding:100px 0 70px}
+.contact .box{padding:56px 28px;background:linear-gradient(135deg,rgba(99,102,241,.22),rgba(6,182,212,.14));border-color:rgba(129,140,248,.4)}
+.contact h2{margin-top:0}
+.contact .cta{justify-content:center}
+footer{border-top:1px solid var(--line);padding:26px 0;color:var(--ink3);font-size:14px;text-align:center}
+.lb{position:fixed;inset:0;z-index:100;background:rgba(5,8,18,.92);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;flex-direction:column;gap:14px;padding:20px}
+.lb.open{display:flex}
+.lb img{max-width:min(1100px,94vw);max-height:76vh;border-radius:14px;box-shadow:0 30px 90px rgba(0,0,0,.6);background:#0d1330}
+.lb .bar{display:flex;gap:12px;align-items:center;color:var(--ink2);font-weight:600;font-size:15px}
+.lb button{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:20px;cursor:pointer}
+.lb button:hover{background:rgba(255,255,255,.14)}
+.lb .x{position:absolute;top:18px;right:18px}
+.rev{opacity:1;transform:none}
+.js .rev{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.js .rev.in{opacity:1;transform:none}
+@media (max-width:980px){
+  .hero .hero-grid{grid-template-columns:1fr}.hero-card{transform:none;max-width:560px}
+  .stats{grid-template-columns:repeat(2,1fr)}.projects{grid-template-columns:1fr}.ai-grid{grid-template-columns:1fr}
+  .flow{grid-template-columns:1fr}.step:not(:last-child)::after{content:"↓";right:auto;left:30px;top:auto;bottom:-16px;transform:none}
+  .links a:not(.btn){display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}.js .rev{opacity:1;transform:none}html{scroll-behavior:auto}
+}
+</style>
 </head>
 <body>
-    <button class="download-btn no-print" onclick="window.print()">Download PDF</button>
+<div class="bg"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
 
-    <header>
-        <h1>Nguyễn Phước Đại Toàn</h1>
-        <div class="subtitle">Fullstack Engineer &amp; Team Lead | SaaS, CRM &amp; AI-Agent-Driven Development</div>
-        <div class="availability">Open to remote, contract &amp; freelance work</div>
-        <div class="contact-info">
-            <span><a href="mailto:nguyentoan102002@gmail.com">nguyentoan102002@gmail.com</a></span> |
-            <span><a href="tel:+84388202534">+84 388 202 534</a></span> |
-            <span>Da Nang, Viet Nam</span><br/>
-            <span>GitHub: <a href="https://github.com/NguyenPhuocDaiToan">github.com/NguyenPhuocDaiToan</a></span> |
-            <span>LinkedIn: <a href="https://linkedin.com/in/nguyentoan2002">linkedin.com/in/nguyentoan2002</a></span>
-        </div>
-    </header>
+<nav><div class="wrap">
+  <a class="logo" href="#top">Toan<span>.dev</span></a>
+  <div class="links">
+    <a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#ai">AI agents</a><a href="#journey">Journey</a>
+    <a class="btn primary sm" href="cv.html">View CV</a>
+  </div>
+</div></nav>
 
-    <div class="section-content">
-        <h2>Summary</h2>
-        <p style="margin-top:0;">
-            Fullstack Engineer and Team Lead with 3+ years building multi-tenant SaaS CRM and Omnichannel platforms for enterprise clients across Saudi Arabia, Vietnam and Indonesia. I ship faster by running coding agents (Claude Code, Codex, Antigravity) inside a strict engineering harness, while I own the design, review and release.
-        </p>
-        <ul>
-            <li><strong>Clients:</strong> STC, Mispay, NAJM, Delta (Saudi Arabia); PNJ, KFC, Lotte (Vietnam)</li>
-            <li><strong>Partner lead:</strong> technical lead and main contact for <a href="https://bab.com.sa/">Bab International</a> (Saudi Arabia) for 3 years</li>
-            <li><strong>Scale:</strong> nearly 200 tenants; peak of 1.8 million messages in one day; a 400,000-contact campaign ran with no impact on realtime chatbot or agent support</li>
-            <li><strong>Leadership:</strong> lead a 5-person team, work directly with clients across regions</li>
-        </ul>
+<header class="hero" id="top"><div class="wrap hero-grid">
+  <div>
+    <span class="pill"><span class="dot"></span>Open to remote, contract &amp; freelance work</span>
+    <h1>Hi, I'm Toan.<br>I build <em>scalable SaaS</em> that stays fast under load.</h1>
+    <p class="lead">Fullstack Engineer and Team Lead. Right now: <span class="type" id="type"></span></p>
+    <p class="lead" style="margin-top:12px;font-size:17px">Enterprise clients in Saudi Arabia, Vietnam and Indonesia. Shipping faster with Claude Code, Codex and Antigravity, inside a strict engineering harness.</p>
+    <div class="cta">
+      <a class="btn primary" href="cv.html">📄 View my CV</a>
+      <a class="btn ghost" href="#projects">See projects →</a>
+      <a class="btn ghost" href="https://www.upwork.com/freelancers/~01dfe1deeb4a734047" target="_blank" rel="noopener">Hire me on Upwork</a>
     </div>
-
-    <div class="section-content">
-        <h2>AI-Agent Engineering</h2>
-        <ul>
-            <li><strong>Tools:</strong> Claude Code, OpenAI Codex and Google Antigravity used daily on production code, not just prototypes.</li>
-            <li><strong>Harness for agents:</strong> every repo carries <em>AGENTS.md</em> rules, a feature list with state, test-first (red test before code), a single <em>init.sh</em> verification gate, commit and branch hooks, and progress and handoff files so any agent can resume work across sessions.</li>
-            <li><strong>Orchestration:</strong> parallel agents on isolated git worktrees, one task at a time per agent with written acceptance criteria, then an independent review pass before merge. In one review it caught two blocking bugs before release.</li>
-            <li><strong>Outcome:</strong> shipped a multi-tenant payment platform and a full live chat widget (sole author) with unit and browser tests, plus a steady stream of fixes to the open-source Lotus billing engine.</li>
-        </ul>
+    <div class="socials">
+      <a href="https://github.com/NguyenPhuocDaiToan" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/nguyentoan2002" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:nguyentoan102002@gmail.com">nguyentoan102002@gmail.com</a>
     </div>
-
-    <div class="section-content">
-        <h2>Technical Skills</h2>
-        <div class="skills-table">
-            <div class="skill-row">
-                <div class="skill-category">AI engineering:</div>
-                <div class="skill-list">Claude Code, Codex, Antigravity, agent harness design (AGENTS.md, TDD gates, worktrees, review loops)</div>
-            </div>
-            <div class="skill-row">
-                <div class="skill-category">Backend:</div>
-                <div class="skill-list">Node.js, NestJS, ExpressJS, Java (Spring Boot), Python (Django), REST APIs, Payload CMS</div>
-            </div>
-            <div class="skill-row">
-                <div class="skill-category">Frontend:</div>
-                <div class="skill-list">Angular, React, Preact, Next.js, TypeScript, Tailwind CSS</div>
-            </div>
-            <div class="skill-row">
-                <div class="skill-category">Data &amp; queues:</div>
-                <div class="skill-list">MongoDB, PostgreSQL, MySQL, SQL Server, Redis, ClickHouse, Elasticsearch, Kafka, RabbitMQ, BullMQ</div>
-            </div>
-            <div class="skill-row">
-                <div class="skill-category">DevOps &amp; cloud:</div>
-                <div class="skill-list">Kubernetes, Docker, AWS (EC2, S3, RDS), CI/CD, high-availability clusters</div>
-            </div>
-            <div class="skill-row">
-                <div class="skill-category">Architecture:</div>
-                <div class="skill-list">Multi-tenant SaaS, event-driven design, real-time messaging (Socket.IO), payment and billing integration</div>
-            </div>
-            <div class="skill-row">
-                <div class="skill-category">Integrations:</div>
-                <div class="skill-list">WhatsApp, Zalo, Facebook, Email, VietQR, ZaloPay, Keycloak SSO</div>
-            </div>
-        </div>
+  </div>
+  <div class="hero-card">
+    <div class="term">
+      <div class="d"><i style="background:#f87171"></i><i style="background:#fbbf24"></i><i style="background:#34d399"></i></div>
+      <div><span class="c">// how a campaign never blocks live chat</span></div>
+      <div><span class="k">queue</span>.add(<span class="s">'live-chat'</span>, msg, { <span class="f">priority</span>: <span class="s">'high'</span> })</div>
+      <div><span class="k">queue</span>.add(<span class="s">'campaign'</span>, batch, { <span class="f">lane</span>: <span class="s">'bulk'</span> })</div>
+      <div><span class="c">// 400k contacts later...</span></div>
+      <div><span class="k">await</span> agents.reply(customer) <span class="c">// still instant</span></div>
+      <div><span class="s">✔ realtime chatbot + agent support unaffected</span></div>
     </div>
+    <span class="chipfloat cf1">🚀 1.8M msgs / day peak</span>
+    <span class="chipfloat cf2">🏢 ~200 tenants</span>
+    <span class="chipfloat cf3">🤖 AI-agent workflow</span>
+  </div>
+</div>
+<div class="wrap">
+  <div class="stats">
+    <div class="stat rev"><b data-to="200" data-pre="~">0</b><span>tenants on one multi-tenant platform</span></div>
+    <div class="stat rev"><b data-to="1.84" data-dec="2" data-suf="M">0</b><span>messages handled in a single day</span></div>
+    <div class="stat rev"><b data-to="400" data-suf="k">0</b><span>contacts in one campaign, chat unaffected</span></div>
+    <div class="stat rev"><b data-to="5">0</b><span>engineers led</span></div>
+    <div class="stat rev"><b data-to="3" data-suf="+">0</b><span>years running production systems</span></div>
+  </div>
+</div></header>
 
-    <div class="section-content">
-        <h2>Work Experience</h2>
+<section id="skills"><div class="wrap">
+  <div class="rev"><span class="eyebrow"><i></i>Skills</span>
+  <h2>The full toolbox, <em>from database to AI agents</em></h2>
+  <p class="sub">Filter by area. Highlighted skills make up the core stack I use in production every day.</p></div>
+  <div class="tabs rev" id="tabs"></div>
+  <div class="legend rev"><i></i>Core stack in production at AntBuddy</div>
+  <div class="skills rev" id="skills-list"></div>
+</div></section>
 
-        <div class="job">
-            <div class="job-header">
-                <div class="job-title-company">Fullstack Developer &amp; Team Lead | AntBuddy</div>
-                <div class="job-date">06/2023 – Present</div>
-            </div>
-            <ul>
-                <li><strong>SaaS platform:</strong> designed and operated a multi-tenant SaaS CRM with nearly 200 tenants, serving enterprise clients in Vietnam, Saudi Arabia and Indonesia, leading a 5-member team.</li>
-                <li><strong>Omnichannel:</strong> built a real-time inbox for Livechat, WhatsApp, Zalo, Facebook and Email. Handled a peak of 1.84 million messages in one day. Prioritized Redis queues kept the system stable when one customer sent a 400,000-contact campaign: realtime chatbot and agent support were never blocked.</li>
-                <li><strong>Data pipelines:</strong> contact import engine with streaming, deduplication, batch writes and crash-safe resume; workflow automation for event-driven engagement.</li>
-                <li><strong>Infrastructure:</strong> high-availability MongoDB, Redis, Kafka and ClickHouse on Kubernetes.</li>
-                <li><strong>Bab International (Saudi Arabia):</strong> for 3 years the technical lead and main contact. Gathered requirements, designed solutions and provided support, with consistently satisfied customers. Delivered for Mispay, STC, NAJM, Delta and Vietnamese brands PNJ, KFC and Lotte.</li>
-                <li><strong>Billing &amp; payments:</strong> customize and operate a self-hosted Lotus (open-source billing engine): credit audit log, add-on billing fixes, plan management, catalog APIs. Built the self-service payment platform on Payload CMS (VietQR, ZaloPay, wallet top-up, multi-tenant pages) that integrates with it.</li>
-                <li><strong>Live chat widget (sole author):</strong> embeddable Preact + Socket.IO widget in Shadow DOM, 95 KB gzipped, English, Vietnamese and Arabic (RTL), with rich messages, file and voice notes, offline retry and Playwright tests.</li>
-            </ul>
-            <p class="tech"><strong>Tech:</strong> Node.js, NestJS, Angular, Preact, TypeScript, MongoDB, PostgreSQL, Redis, Kafka, ClickHouse, Kubernetes, Docker, AWS, Payload CMS</p>
-        </div>
+<section id="projects"><div class="wrap">
+  <div class="rev"><span class="eyebrow"><i></i>Projects</span>
+  <h2>Things I built, <em>with proof</em></h2>
+  <p class="sub">Click any project to flip through its architecture and screens. Screens use sample data, no client information.</p></div>
+  <div class="grid projects">
+    <article class="proj rev">
+      <button class="img" data-gallery="omni" data-title="Omnichannel CRM & Customer Engagement Platform" aria-label="Open gallery"><img loading="lazy" src="assets/omnichannel/00_cover.png" alt="Omnichannel platform cover"><span class="more">7 slides →</span></button>
+      <div class="body"><h3>Omnichannel CRM &amp; Customer Engagement</h3>
+      <p>One real-time inbox for 16+ channels with campaigns, automation and agent analytics. Prioritized queues keep live chat fast while a 400,000-contact campaign runs.</p>
+      <div class="tags"><span class="tag">Node.js</span><span class="tag">MongoDB</span><span class="tag">Redis · Bull</span><span class="tag">Socket.IO</span><span class="tag">Angular</span><span class="tag">Kubernetes</span></div></div>
+    </article>
+    <article class="proj rev">
+      <button class="img" data-gallery="billing" data-title="Self-Service Billing & Payment Platform" aria-label="Open gallery"><img loading="lazy" src="assets/billing/00_cover.png" alt="Billing platform cover"><span class="more">3 slides →</span></button>
+      <div class="body"><h3>Billing &amp; Payment Platform</h3>
+      <p>Customers pick a plan, pay by QR and are activated automatically. Server-side pricing, per-tenant gateways (VietQR, ZaloPay), wallet top-up and a no-code page builder, integrated with a customized open-source Lotus billing engine.</p>
+      <div class="tags"><span class="tag">Payload CMS</span><span class="tag">Next.js</span><span class="tag">PostgreSQL</span><span class="tag">TypeScript</span><span class="tag">VietQR</span><span class="tag">ZaloPay</span></div></div>
+    </article>
+    <article class="proj rev">
+      <button class="img" data-gallery="livechat" data-title="Embeddable Live Chat Widget" aria-label="Open gallery"><img loading="lazy" src="assets/livechat/00_cover.png" alt="Live chat widget cover"><span class="more">3 slides →</span></button>
+      <div class="body"><span class="badge">Sole author</span><h3>Embeddable Live Chat Widget</h3>
+      <p>Two script lines give any website real-time chat. Shadow DOM isolation, 95 KB gzipped, English, Vietnamese and Arabic (RTL), rich messages, offline retry and Playwright tests.</p>
+      <div class="tags"><span class="tag">Preact</span><span class="tag">TypeScript</span><span class="tag">Socket.IO</span><span class="tag">Vite</span><span class="tag">Playwright</span></div></div>
+    </article>
+    <article class="proj rev">
+      <button class="img" data-gallery="import" data-title="Million-Row Import Engine" aria-label="Open image"><img loading="lazy" src="assets/omnichannel/05_big_import.png" alt="Import engine"><span class="more">Open →</span></button>
+      <div class="body"><h3>Million-Row Import Engine</h3>
+      <p>Fair, resumable and crash-safe imports. One running import per tenant, live progress over Socket.IO, and automatic recovery from the saved offset after a crash or deploy.</p>
+      <div class="tags"><span class="tag">Node.js</span><span class="tag">Bull</span><span class="tag">Redis</span><span class="tag">MongoDB</span><span class="tag">S3</span></div></div>
+    </article>
+  </div>
+</div></section>
 
-        <div class="job">
-            <div class="job-header">
-                <div class="job-title-company">Fullstack Developer | IZI SOFTWARE</div>
-                <div class="job-date">01/2023 – 04/2023</div>
-            </div>
-            <ul>
-                <li><strong>TRAFFICLIGHT (team of 5):</strong> web app for administrators to adjust display modes, configure timing for traffic light clusters and monitor lights live on a map.</li>
-                <li><strong>My part:</strong> designed the database and built the management features for device types, devices, device configurations and general settings.</li>
-            </ul>
-            <p class="tech"><strong>Tech:</strong> MongoDB, NestJS, Angular</p>
-        </div>
+<section id="ai"><div class="wrap">
+  <div class="rev"><span class="eyebrow"><i></i>AI-agent engineering</span>
+  <h2>Agents write code. <em>I own the design, review and release.</em></h2>
+  <p class="sub">Coding agents are powerful and sloppy without guardrails. So every repo ships with a harness that makes their work verifiable.</p>
+  <div class="tools"><span class="tool">Claude Code</span><span class="tool">OpenAI Codex</span><span class="tool">Google Antigravity</span></div></div>
+  <div class="flow">
+    <div class="step rev"><div class="n">1</div><b>Spec</b><span>Task doc with acceptance criteria and test mapping</span></div>
+    <div class="step rev"><div class="n">2</div><b>Isolate</b><span>Each agent works on its own git worktree and branch</span></div>
+    <div class="step rev"><div class="n">3</div><b>Test first</b><span>Red test before code, one task at a time</span></div>
+    <div class="step rev"><div class="n">4</div><b>Gate</b><span>One init.sh check plus commit and branch hooks</span></div>
+    <div class="step rev"><div class="n">5</div><b>Review</b><span>Independent review pass, then merge</span></div>
+  </div>
+  <div class="ai-grid">
+    <div class="box rev"><h3>The harness</h3><ul>
+      <li><b>AGENTS.md</b> rules every agent must read first</li>
+      <li><b>Feature list</b> with state, one feature in progress at a time</li>
+      <li><b>Progress and handoff files</b> so any agent resumes across sessions</li>
+      <li><b>Verification gate</b> that humans and agents both run before commit</li></ul></div>
+    <div class="box rev"><h3>What it delivered</h3><ul>
+      <li>A multi-tenant <b>payment platform</b> with written task specs</li>
+      <li>A full <b>live chat widget</b> as sole author with unit and browser tests</li>
+      <li>A steady stream of <b>fixes to the open-source Lotus</b> billing engine</li>
+      <li>An independent review that <b>caught two blocking bugs</b> before release</li></ul></div>
+  </div>
+</div></section>
+
+<section id="journey"><div class="wrap">
+  <div class="rev"><span class="eyebrow"><i></i>Journey</span>
+  <h2>Experience &amp; <em>who I work with</em></h2></div>
+  <div class="tl">
+    <div class="ti rev"><div class="when">06/2023 – PRESENT</div><h3>Fullstack Developer &amp; Team Lead · AntBuddy</h3>
+      <p>Designed and operate a multi-tenant SaaS CRM with nearly 200 tenants, leading a 5-person team. Technical lead and main contact for Bab International (Saudi Arabia) for 3 years.</p>
+      <div class="clients"><span class="client">STC</span><span class="client">Mispay</span><span class="client">NAJM</span><span class="client">Delta</span><span class="client">PNJ</span><span class="client">KFC</span><span class="client">Lotte</span></div></div>
+    <div class="ti rev"><div class="when">01/2023 – 04/2023</div><h3>Fullstack Developer · IZI Software</h3>
+      <p>TRAFFICLIGHT, a web app to configure and monitor traffic lights on a map (MongoDB, NestJS, Angular). Designed the database and built the device management features.</p></div>
+    <div class="ti rev"><div class="when">2020 – 2025</div><h3>B.Eng. Software Engineering · Da Nang University of Science and Technology</h3>
+      <p>GPA 3.83/4.0, Excellent Student. Graduation project: AI-assisted CRM for diagnosis from X-ray images. Also built fall detection on Jetson Nano and handwritten text recognition.</p></div>
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <div class="box rev">
+    <h2>Let's build something <em>that scales</em></h2>
+    <p class="sub" style="margin:14px auto 0">Need a CRM, a messaging platform, a payment flow or an AI-agent workflow for your team? Send me the details.</p>
+    <div class="cta">
+      <a class="btn primary" href="cv.html">📄 View my CV</a>
+      <a class="btn ghost" href="mailto:nguyentoan102002@gmail.com">✉ Email me</a>
+      <a class="btn ghost" href="https://www.upwork.com/freelancers/~01dfe1deeb4a734047" target="_blank" rel="noopener">Upwork profile</a>
     </div>
+  </div>
+</div></section>
 
-    <div class="section-content">
-        <h2>Education</h2>
-        <div class="job-header" style="margin-bottom:0;">
-            <div class="job-title-company">Da Nang University of Science and Technology</div>
-            <div class="job-date">10/2020 – 09/2025</div>
-        </div>
-        <div style="margin-bottom: 5px;">B.Eng. Information Technology (Software Engineering) | GPA 3.83/4.0 | Excellent Student, multiple scholarships (Paradox, KMS)</div>
-        <ul>
-            <li><strong>Graduation project:</strong> AI-assisted CRM for medical diagnosis from X-ray images. Also built real-time fall detection on Jetson Nano and handwritten text recognition.</li>
-            <li><strong>Languages:</strong> Vietnamese (native); English: basic communication, reads technical documentation (TOEIC 685)</li>
-        </ul>
-    </div>
+<footer>© <span id="yr"></span> Nguyễn Phước Đại Toàn · Da Nang, Viet Nam</footer>
 
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Project gallery">
+  <button class="x" id="lbx" aria-label="Close">✕</button>
+  <img id="lbimg" alt="">
+  <div class="bar"><button id="lbp" aria-label="Previous">←</button><span id="lbc"></span><button id="lbn" aria-label="Next">→</button></div>
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+/* typing */
+(function(){
+  var words=['multi-tenant SaaS CRM','Omnichannel messaging at scale','payment and billing platforms','AI-agent-driven delivery'];
+  var el=document.getElementById('type'),w=0,c=0,del=false;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){el.textContent=words[0];return;}
+  (function tick(){
+    var cur=words[w];
+    el.textContent=cur.slice(0,c);
+    if(!del&&c<cur.length){c++;setTimeout(tick,55);}
+    else if(!del){del=true;setTimeout(tick,1600);}
+    else if(c>0){c--;setTimeout(tick,28);}
+    else{del=false;w=(w+1)%words.length;setTimeout(tick,300);}
+  })();
+})();
+
+/* skills */
+var SKILLS=[
+ ['Backend','Node.js',1],['Backend','NestJS',1],['Backend','ExpressJS'],['Backend','Java'],['Backend','Spring Boot'],['Backend','Python (Django)'],['Backend','REST APIs'],['Backend','Payload CMS',1],['Backend','WebSockets'],
+ ['Frontend','Angular',1],['Frontend','React'],['Frontend','Preact',1],['Frontend','Next.js'],['Frontend','TypeScript',1],['Frontend','JavaScript'],['Frontend','RxJS'],['Frontend','HTML / CSS'],['Frontend','Tailwind CSS'],
+ ['Data & Queues','MongoDB',1],['Data & Queues','PostgreSQL',1],['Data & Queues','MySQL'],['Data & Queues','SQL Server'],['Data & Queues','Redis',1],['Data & Queues','ClickHouse',1],['Data & Queues','Elasticsearch'],['Data & Queues','Kafka',1],['Data & Queues','RabbitMQ'],['Data & Queues','BullMQ'],
+ ['DevOps','Kubernetes',1],['DevOps','Docker',1],['DevOps','AWS (EC2, S3, RDS)',1],['DevOps','CI/CD'],['DevOps','HAProxy'],['DevOps','High-availability clusters'],
+ ['Integrations','Socket.IO',1],['Integrations','WhatsApp'],['Integrations','Zalo'],['Integrations','Facebook'],['Integrations','Email'],['Integrations','VietQR'],['Integrations','ZaloPay'],['Integrations','Keycloak SSO'],
+ ['AI & Agents','Claude Code'],['AI & Agents','OpenAI Codex'],['AI & Agents','Google Antigravity'],['AI & Agents','Agent harness design'],['AI & Agents','Computer vision'],['AI & Agents','NVIDIA Jetson Nano'],['AI & Agents','Handwritten text recognition']
+];
+var CATS=['All'].concat(SKILLS.map(function(s){return s[0]}).filter(function(v,i,a){return a.indexOf(v)===i}));
+var tabs=document.getElementById('tabs'),list=document.getElementById('skills-list');
+CATS.forEach(function(cat,i){
+  var b=document.createElement('button');b.className='tab'+(i===0?' on':'');b.textContent=cat;b.type='button';
+  b.onclick=function(){
+    Array.prototype.forEach.call(tabs.children,function(t){t.classList.remove('on')});b.classList.add('on');
+    Array.prototype.forEach.call(list.children,function(s){s.classList.toggle('hide',cat!=='All'&&s.dataset.cat!==cat)});
+  };tabs.appendChild(b);
+});
+SKILLS.forEach(function(s){
+  var d=document.createElement('span');d.className='sk'+(s[2]?' core':'');d.textContent=s[1];d.dataset.cat=s[0];list.appendChild(d);
+});
+
+/* reveal + counters */
+function count(el){
+  var to=parseFloat(el.dataset.to),dec=parseInt(el.dataset.dec||'0',10),pre=el.dataset.pre||'',suf=el.dataset.suf||'',t0=null,dur=1400;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){el.textContent=pre+to.toFixed(dec)+suf;return;}
+  function f(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/dur,1),e=1-Math.pow(1-p,3);el.textContent=pre+(to*e).toFixed(dec)+suf;if(p<1)requestAnimationFrame(f);}
+  requestAnimationFrame(f);
+}
+var io=('IntersectionObserver' in window)?new IntersectionObserver(function(es){
+  es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');var n=e.target.querySelector('[data-to]');if(n&&!n.dataset.done){n.dataset.done=1;count(n);}io.unobserve(e.target);}});
+},{threshold:.15}):null;
+document.querySelectorAll('.rev').forEach(function(el){
+  if(io){io.observe(el);}else{el.classList.add('in');var n=el.querySelector('[data-to]');if(n)count(n);}
+});
+
+/* gallery */
+var G={
+ omni:['00_cover','01_architecture','03_message_pipeline','04_campaign_engine','05_big_import','02_channels','06_capabilities'].map(function(n){return 'assets/omnichannel/'+n+'.png'}),
+ billing:['00_cover','01_architecture','02_wallet_delivery'].map(function(n){return 'assets/billing/'+n+'.png'}),
+ livechat:['00_cover','01_features','02_engineering'].map(function(n){return 'assets/livechat/'+n+'.png'}),
+ import:['assets/omnichannel/05_big_import.png']
+};
+var lb=document.getElementById('lb'),img=document.getElementById('lbimg'),cnt=document.getElementById('lbc'),cur=[],idx=0,title='',lastFocus=null;
+function show(){img.src=cur[idx];img.alt=title+' slide '+(idx+1);cnt.textContent=title+' · '+(idx+1)+' / '+cur.length;
+  document.getElementById('lbp').style.visibility=document.getElementById('lbn').style.visibility=cur.length>1?'visible':'hidden';}
+function open(k,t){cur=G[k];idx=0;title=t;lastFocus=document.activeElement;show();lb.classList.add('open');document.body.style.overflow='hidden';document.getElementById('lbx').focus();}
+function close(){lb.classList.remove('open');document.body.style.overflow='';if(lastFocus)lastFocus.focus();}
+document.querySelectorAll('[data-gallery]').forEach(function(b){b.addEventListener('click',function(){open(b.dataset.gallery,b.dataset.title);});});
+document.getElementById('lbx').onclick=close;
+document.getElementById('lbp').onclick=function(){idx=(idx-1+cur.length)%cur.length;show();};
+document.getElementById('lbn').onclick=function(){idx=(idx+1)%cur.length;show();};
+lb.addEventListener('click',function(e){if(e.target===lb)close();});
+document.addEventListener('keydown',function(e){
+  if(!lb.classList.contains('open'))return;
+  if(e.key==='Escape')close();
+  if(e.key==='ArrowRight')document.getElementById('lbn').click();
+  if(e.key==='ArrowLeft')document.getElementById('lbp').click();
+});
+</script>
 </body>
 </html>
