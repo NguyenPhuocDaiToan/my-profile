@@ -2,7 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Nguyen Phuoc Dai Toan - Resume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyen Phuoc Dai Toan - Fullstack Engineer Resume</title>
+    <meta name="description" content="Fullstack Engineer & Team Lead specializing in scalable multi-tenant SaaS CRM, Omnichannel messaging, distributed systems and cloud-native infrastructure (Node.js, NestJS, Angular, React, Kafka, Redis, MongoDB, Kubernetes). Open to remote and freelance work.">
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Nguyen Phuoc Dai Toan - Fullstack Engineer">
+    <meta property="og:description" content="Multi-tenant SaaS CRM, Omnichannel messaging, distributed systems, Kubernetes. Open to remote and freelance work.">
+    <meta property="og:url" content="https://nguyenphuocdaitoan.github.io/my-profile/">
     <style>
         @page {
             size: A4;
@@ -11,31 +17,38 @@
         *, *::before, *::after {
             box-sizing: border-box;
         }
-        
-        /* Đổi màu nền ngoài web thành xám nhạt để làm nổi bật tờ CV */
+
         html {
-            background-color: #f0f2f5; 
+            background-color: #f0f2f5;
         }
 
-        /* Định dạng khung giấy A4 */
         body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             color: #333333;
-            margin: 40px auto; /* Căn giữa trang web, cách trên dưới 40px */
+            margin: 40px auto;
             padding: 15mm 15mm;
             line-height: 1.5;
             font-size: 10.5pt;
-            max-width: 210mm; /* Giới hạn chiều rộng đúng chuẩn A4 */
-            background-color: #ffffff; /* Màu nền trắng của giấy */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Tạo bóng đổ viền 3D */
-            border-radius: 4px; /* Bo góc cực nhẹ cho đẹp mắt */
+            max-width: 210mm;
+            background-color: #ffffff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            border-radius: 4px;
         }
 
-        /* Tắt bóng đổ và căn giữa khi người dùng bấm In (Ctrl+P) hoặc Save PDF */
-        @media print {
-            html {
-                background-color: #ffffff;
+        @media (max-width: 700px) {
+            body {
+                margin: 0;
+                padding: 16px;
+                border-radius: 0;
             }
+            .job-header { display: block; }
+            .job-title-company, .job-date { display: block; text-align: left; }
+            .skill-row, .skills-table { display: block; }
+            .skill-category, .skill-list { display: block; width: auto; }
+        }
+
+        @media print {
+            html { background-color: #ffffff; }
             body {
                 margin: 0;
                 padding: 0;
@@ -43,7 +56,28 @@
                 max-width: none;
                 border-radius: 0;
             }
+            .no-print { display: none !important; }
+            a { color: inherit; text-decoration: none; }
+            .job { page-break-inside: avoid; }
         }
+
+        a { color: #2B547E; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .download-btn {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            background: #2B547E;
+            color: #ffffff;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 4px;
+            font-size: 10pt;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        .download-btn:hover { background: #1f3d5c; }
 
         header {
             text-align: center;
@@ -62,6 +96,12 @@
             font-size: 13pt;
             font-weight: bold;
             color: #555555;
+            margin-bottom: 4px;
+        }
+        .availability {
+            font-size: 10pt;
+            color: #2B547E;
+            font-weight: bold;
             margin-bottom: 8px;
         }
         .contact-info {
@@ -70,6 +110,7 @@
         }
         .contact-info span {
             margin: 0 8px;
+            white-space: nowrap;
         }
         h2 {
             font-size: 13pt;
@@ -104,6 +145,11 @@
             color: #666666;
             font-style: italic;
         }
+        .tech {
+            font-size: 9.5pt;
+            color: #555555;
+            margin: 2px 0 0 0;
+        }
         ul {
             margin: 0 0 0 18px;
             padding: 0;
@@ -122,8 +168,10 @@
         .skill-category {
             display: table-cell;
             font-weight: bold;
-            width: 120px;
+            width: 150px;
             padding-bottom: 4px;
+            padding-right: 8px;
+            vertical-align: top;
         }
         .skill-list {
             display: table-cell;
@@ -132,66 +180,96 @@
     </style>
 </head>
 <body>
+    <button class="download-btn no-print" onclick="window.print()">Download PDF</button>
 
     <header>
         <h1>Nguyễn Phước Đại Toàn</h1>
-        <div class="subtitle">Fullstack Engineer | SaaS & CRM Platform</div>
+        <div class="subtitle">Fullstack Engineer &amp; Team Lead | SaaS, CRM &amp; AI-Agent-Driven Development</div>
+        <div class="availability">Open to remote, contract &amp; freelance work</div>
         <div class="contact-info">
-            <span>nguyentoan102002@gmail.com</span> | 
-            <span>+84388202534</span> | 
+            <span><a href="mailto:nguyentoan102002@gmail.com">nguyentoan102002@gmail.com</a></span> |
+            <span><a href="tel:+84388202534">+84 388 202 534</a></span> |
             <span>Da Nang, Viet Nam</span><br/>
-            <span>GitHub: github.com/NguyenPhuocDaiToan</span> | 
-            <span>LinkedIn: linkedin.com/in/nguyentoan2002</span>
+            <span>GitHub: <a href="https://github.com/NguyenPhuocDaiToan">github.com/NguyenPhuocDaiToan</a></span> |
+            <span>LinkedIn: <a href="https://linkedin.com/in/nguyentoan2002">linkedin.com/in/nguyentoan2002</a></span>
         </div>
     </header>
 
     <div class="section-content">
-        <h2>Professional Summary</h2>
+        <h2>Summary</h2>
         <p style="margin-top:0;">
-            Fullstack Engineer specializing in scalable SaaS CRM and Omnichannel platforms, with strong expertise in distributed systems, real-time messaging, and cloud-native architectures. Proven ability to lead development teams, handle heavy data loads, optimize message queues, and deploy robust clusters. Highly self-motivated and communicative, making me well-equipped for remote collaboration. Eager to apply my system design background to drive impactful healthcare technology solutions.
+            Fullstack Engineer and Team Lead with 3+ years building multi-tenant SaaS CRM and Omnichannel platforms for enterprise clients across Saudi Arabia, Vietnam and Indonesia. I ship faster by running coding agents (Claude Code, Codex, Antigravity) inside a strict engineering harness, while I own the design, review and release.
         </p>
+        <ul>
+            <li><strong>Clients:</strong> STC, Mispay, NAJM, Delta (Saudi Arabia); PNJ, KFC, Lotte (Vietnam)</li>
+            <li><strong>Partner lead:</strong> technical lead and main contact for <a href="https://bab.com.sa/">Bab International</a> (Saudi Arabia) for 3 years</li>
+            <li><strong>Scale:</strong> nearly 200 tenants; peak of 1.8 million messages in one day; a 400,000-contact campaign ran with no impact on realtime chatbot or agent support</li>
+            <li><strong>Leadership:</strong> lead a 5-person team, work directly with clients across regions</li>
+        </ul>
+    </div>
+
+    <div class="section-content">
+        <h2>AI-Agent Engineering</h2>
+        <ul>
+            <li><strong>Tools:</strong> Claude Code, OpenAI Codex and Google Antigravity used daily on production code, not just prototypes.</li>
+            <li><strong>Harness for agents:</strong> every repo carries <em>AGENTS.md</em> rules, a feature list with state, test-first (red test before code), a single <em>init.sh</em> verification gate, commit and branch hooks, and progress and handoff files so any agent can resume work across sessions.</li>
+            <li><strong>Orchestration:</strong> parallel agents on isolated git worktrees, one task at a time per agent with written acceptance criteria, then an independent review pass before merge. In one review it caught two blocking bugs before release.</li>
+            <li><strong>Outcome:</strong> shipped a multi-tenant payment platform and a full live chat widget (sole author) with unit and browser tests, plus a steady stream of fixes to the open-source Lotus billing engine.</li>
+        </ul>
     </div>
 
     <div class="section-content">
         <h2>Technical Skills</h2>
         <div class="skills-table">
             <div class="skill-row">
+                <div class="skill-category">AI engineering:</div>
+                <div class="skill-list">Claude Code, Codex, Antigravity, agent harness design (AGENTS.md, TDD gates, worktrees, review loops)</div>
+            </div>
+            <div class="skill-row">
                 <div class="skill-category">Backend:</div>
-                <div class="skill-list">Node.js, ExpressJS, NestJS, Java, Spring Boot, Python (Django)</div>
+                <div class="skill-list">Node.js, NestJS, ExpressJS, Java (Spring Boot), Python (Django), REST APIs, Payload CMS</div>
             </div>
             <div class="skill-row">
                 <div class="skill-category">Frontend:</div>
-                <div class="skill-list">Angular, ReactJS, TypeScript, JavaScript, HTML/CSS, Tailwind</div>
+                <div class="skill-list">Angular, React, Preact, Next.js, TypeScript, Tailwind CSS</div>
             </div>
             <div class="skill-row">
-                <div class="skill-category">Databases:</div>
-                <div class="skill-list">MongoDB, MySQL, SQL Server, Redis, ClickHouse</div>
+                <div class="skill-category">Data &amp; queues:</div>
+                <div class="skill-list">MongoDB, PostgreSQL, MySQL, SQL Server, Redis, ClickHouse, Elasticsearch, Kafka, RabbitMQ, BullMQ</div>
             </div>
             <div class="skill-row">
-                <div class="skill-category">DevOps & Cloud:</div>
-                <div class="skill-list">Kubernetes (K8s), AWS (EC2, S3, RDS), Docker, Kafka, CI/CD, RabbitMQ, BullMQ</div>
+                <div class="skill-category">DevOps &amp; cloud:</div>
+                <div class="skill-list">Kubernetes, Docker, AWS (EC2, S3, RDS), CI/CD, high-availability clusters</div>
+            </div>
+            <div class="skill-row">
+                <div class="skill-category">Architecture:</div>
+                <div class="skill-list">Multi-tenant SaaS, event-driven design, real-time messaging (Socket.IO), payment and billing integration</div>
+            </div>
+            <div class="skill-row">
+                <div class="skill-category">Integrations:</div>
+                <div class="skill-list">WhatsApp, Zalo, Facebook, Email, VietQR, ZaloPay, Keycloak SSO</div>
             </div>
         </div>
     </div>
 
     <div class="section-content">
         <h2>Work Experience</h2>
-        
+
         <div class="job">
             <div class="job-header">
-                <div class="job-title-company">Fullstack Developer & Team Lead | AntBuddy</div>
+                <div class="job-title-company">Fullstack Developer &amp; Team Lead | AntBuddy</div>
                 <div class="job-date">06/2023 – Present</div>
             </div>
             <ul>
-                <li><strong>SaaS Architecture & Leadership:</strong> Designed and operated a highly scalable, multi-tenant SaaS CRM platform serving enterprise clients across Vietnam, Saudi Arabia, and Indonesia while leading a 5-member development team.</li>
-                <li><strong>Omnichannel System:</strong> Spearheaded a real-time Omnichannel support system (Livechat, WhatsApp, Zalo, Facebook, Email) capable of concurrently processing hundreds of thousands of marketing messages and customer conversations.</li>
-                <li><strong>Contact Import Engine:</strong> Designed a high-volume Contact Import Engine with streaming processing, deduplication strategies, batch writes and asynchronous reporting.</li>
-                <li><strong>Workflow Automation:</strong> Built workflow automation modules enabling event-driven business processes and customer engagement automation.</li>
-                <li><strong>System Optimization:</strong> Optimized Redis Queue architecture to prioritize real-time Agent/Customer interactions over batch Campaign messages (managing 500,000+ contacts), ensuring zero latency impact on live operations.</li>
-                <li><strong>High Availability & Infrastructure:</strong> Participated in the design and operation of HA infrastructures for MongoDB, Redis, Kafka, and ClickHouse to support heavy data loads and real-time services.</li>
-                <li><strong>Enterprise Integration:</strong> Integrated CRM and Omnichannel services with enterprise customer ecosystems and third-party platforms across multiple regions.</li>
-                <li><strong>BSS & CMS:</strong> Developed "Lotus", a Business Support System (BSS) for billing/subscriptions, and implemented a headless CMS architecture using Payload CMS.</li>
+                <li><strong>SaaS platform:</strong> designed and operated a multi-tenant SaaS CRM with nearly 200 tenants, serving enterprise clients in Vietnam, Saudi Arabia and Indonesia, leading a 5-member team.</li>
+                <li><strong>Omnichannel:</strong> built a real-time inbox for Livechat, WhatsApp, Zalo, Facebook and Email. Handled a peak of 1.84 million messages in one day. Prioritized Redis queues kept the system stable when one customer sent a 400,000-contact campaign: realtime chatbot and agent support were never blocked.</li>
+                <li><strong>Data pipelines:</strong> contact import engine with streaming, deduplication, batch writes and crash-safe resume; workflow automation for event-driven engagement.</li>
+                <li><strong>Infrastructure:</strong> high-availability MongoDB, Redis, Kafka and ClickHouse on Kubernetes.</li>
+                <li><strong>Bab International (Saudi Arabia):</strong> for 3 years the technical lead and main contact. Gathered requirements, designed solutions and provided support, with consistently satisfied customers. Delivered for Mispay, STC, NAJM, Delta and Vietnamese brands PNJ, KFC and Lotte.</li>
+                <li><strong>Billing &amp; payments:</strong> customize and operate a self-hosted Lotus (open-source billing engine): credit audit log, add-on billing fixes, plan management, catalog APIs. Built the self-service payment platform on Payload CMS (VietQR, ZaloPay, wallet top-up, multi-tenant pages) that integrates with it.</li>
+                <li><strong>Live chat widget (sole author):</strong> embeddable Preact + Socket.IO widget in Shadow DOM, 95 KB gzipped, English, Vietnamese and Arabic (RTL), with rich messages, file and voice notes, offline retry and Playwright tests.</li>
             </ul>
+            <p class="tech"><strong>Tech:</strong> Node.js, NestJS, Angular, Preact, TypeScript, MongoDB, PostgreSQL, Redis, Kafka, ClickHouse, Kubernetes, Docker, AWS, Payload CMS</p>
         </div>
 
         <div class="job">
@@ -200,24 +278,23 @@
                 <div class="job-date">01/2023 – 04/2023</div>
             </div>
             <ul>
-                <li>Developed "TRAFFICLIGHT", a web application to manage traffic lights and monitor traffic on a map interface.</li>
-                <li>Designed the database architecture and implemented management functionalities for device types, configurations, and system settings.</li>
+                <li><strong>TRAFFICLIGHT (team of 5):</strong> web app for administrators to adjust display modes, configure timing for traffic light clusters and monitor lights live on a map.</li>
+                <li><strong>My part:</strong> designed the database and built the management features for device types, devices, device configurations and general settings.</li>
             </ul>
+            <p class="tech"><strong>Tech:</strong> MongoDB, NestJS, Angular</p>
         </div>
     </div>
 
     <div class="section-content">
-        <h2>Education & Certifications</h2>
+        <h2>Education</h2>
         <div class="job-header" style="margin-bottom:0;">
             <div class="job-title-company">Da Nang University of Science and Technology</div>
             <div class="job-date">10/2020 – 09/2025</div>
         </div>
-        <div style="font-size: 10.5pt; margin-bottom: 5px;">Major: Information Technology - Software Engineering | GPA: 3.83/4.0</div>
+        <div style="margin-bottom: 5px;">B.Eng. Information Technology (Software Engineering) | GPA 3.83/4.0 | Excellent Student, multiple scholarships (Paradox, KMS)</div>
         <ul>
-            <li><strong>Certifications:</strong> TOEIC 685</li>
-            <li><strong>Graduation Research Project:</strong> AI-assisted CRM System for Medical Diagnosis from X-ray Images.</li>
-            <li><strong>Honors:</strong> Achieved Excellent Student status and received multiple Encouraging Study & Company Scholarships (Paradox, KMS).</li>
-            <li><strong>Other AI/Tech Projects:</strong> Real-time fall detection using Jetson Nano, Handwritten Text Recognition.</li>
+            <li><strong>Graduation project:</strong> AI-assisted CRM for medical diagnosis from X-ray images. Also built real-time fall detection on Jetson Nano and handwritten text recognition.</li>
+            <li><strong>Languages:</strong> Vietnamese (native); English: basic communication, reads technical documentation (TOEIC 685)</li>
         </ul>
     </div>
 
